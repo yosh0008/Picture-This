@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -15,9 +15,56 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+
+    <picture>
+
+<!-- Landscape -->
+
+        <source srcset="images/landscape/museum-320.jpg,
+                    images/landscape/museum-640.jpg 2x,
+                    images/landscape/museum-960.jpg 3x"
+            media="(max-width: 319px)">
+
+    <source srcset="images/landscape/museum-480.jpg,
+                    images/landscape/museum-960.jpg 2x,
+                    images/landscape/museum-1440.jpg 3x"
+            media="(max-width: 479px)">
+
+    <source srcset="images/landscape/museum-720.jpg,
+                    images/landscape/museum-1440.jpg 2x,
+                    images/landscape/museum-2160.jpg 3x"
+            media="(max-width: 719px)">
+
+    <source srcset="images/landscape/museum-960.jpg,
+                    images/landscape/museum-1920.jpg 2x,
+                    images/landscape/museum-2880.jpg 3x"
+            media="(max-width: 959px)">
+    
+<!-- Square -->
+      
+        <source srcset="images/square/museum-800.jpg,
+                        images/square/museum-1600.jpg 2x,
+                        images/square/museum-2400.jpg 3x"                      
+                media="(min-width: 1600px)">
+
+        <source srcset="images/square/museum-640.jpg,
+                        images/square/museum-1280.jpg 2x,
+                        images/square/museum-1920.jpg 3x"
+                media="(min-width: 1280px)">
+
+        <source srcset="images/square/museum-480.jpg,
+                        images/square/museum-960.jpg 2x,
+                        images/square/museum-1440.jpg 3x"                        
+                media="(min-width: 960px)">
+    
+        <img src="images/museum.jpg" alt="A bunch of paintings displayed on the walls of an art museum">
+    </picture>
 
   </header>
+
+    
+
+
 </body>
 
 </html>
